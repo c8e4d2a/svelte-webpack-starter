@@ -75,7 +75,8 @@ const config: Configuration = {
 			// Rule: Svelte
 			{
 				test: /\.svelte$/,
-				exclude: /node_modules/,
+				// excluding node_modules breaks @roxi/routify
+				//exclude: /node_modules/,
 				use: {
 					loader: 'svelte-loader',
 					options: {
